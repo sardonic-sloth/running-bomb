@@ -17,11 +17,11 @@ func _physics_process(delta):
 	if Input.is_action_pressed('ui_right'):
 		motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
 		$Sprite.flip_h = false
-		$Sprite.play('Run')
+		$Sprite.play('Walk')
 	elif Input.is_action_pressed('ui_left'):
 		motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
 		$Sprite.flip_h = true
-		$Sprite.play('Run')
+		$Sprite.play('Walk')
 	else:
 		friction = true
 		if abs(motion.x) < (float(MAX_SPEED) / 2):
