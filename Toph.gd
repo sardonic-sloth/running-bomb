@@ -35,6 +35,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed('ui_up'):
 			jumping = true
 			motion.y = JUMP_HEIGHT
+			$Boing.play()
 		else:
 			jumping = false
 			motion.y = 0

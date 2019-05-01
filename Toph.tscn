@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Toph.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Player/walk1.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Sprites/Player/Run4.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Player/Run7.png" type="Texture" id=10]
 [ext_resource path="res://Sprites/sky.png" type="Texture" id=11]
+[ext_resource path="res://Audio/Effects/boing.ogg" type="AudioStream" id=12]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -41,7 +42,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 25.0
+radius = 23.0
 
 [node name="Toph" type="KinematicBody2D"]
 position = Vector2( 0, 4 )
@@ -73,4 +74,9 @@ motion_mirroring = Vector2( 640, 640 )
 [node name="sky" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 texture = ExtResource( 11 )
 centered = false
+
+[node name="Boing" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 12 )
+volume_db = 5.0
+pitch_scale = 5.0
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Toph.tscn" type="PackedScene" id=1]
 [ext_resource path="res://JungleDirtTileSet.tres" type="TileSet" id=2]
 [ext_resource path="res://Exit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Audio/Music/World1Music.ogg" type="AudioStream" id=4]
 
 [node name="World" type="Node2D"]
 position = Vector2( 1, -0.999969 )
@@ -48,4 +49,9 @@ __meta__ = {
 [node name="Exit" parent="." instance=ExtResource( 3 )]
 position = Vector2( 639, 161 )
 next_world = "res://World2.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 10.0
+autoplay = true
 
