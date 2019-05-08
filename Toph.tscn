@@ -68,13 +68,8 @@ current = true
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-<<<<<<< HEAD
 motion_scale = Vector2( 0.1, 0.1 )
 motion_mirroring = Vector2( 3000, 3000 )
-=======
-motion_scale = Vector2( 0.5, 0.5 )
-motion_mirroring = Vector2( 640, 640 )
->>>>>>> eff5a2cd0f0fc835f721309002548630f9c3d645
 
 [node name="sky" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( -10, 0 )
