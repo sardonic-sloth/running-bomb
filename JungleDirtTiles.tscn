@@ -8,6 +8,7 @@ extents = Vector2( 8, 8 )
 [node name="JungleDirtTiles" type="Node"]
 
 [node name="0" type="Sprite" parent="."]
+editor/display_folded = true
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -25,6 +26,7 @@ scale = Vector2( 2, 2 )
 shape = SubResource( 1 )
 
 [node name="1" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 64, 0 )
 texture = ExtResource( 1 )
 centered = false
@@ -43,6 +45,7 @@ scale = Vector2( 2, 2 )
 shape = SubResource( 1 )
 
 [node name="2" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 128, 0 )
 texture = ExtResource( 1 )
 centered = false
@@ -61,6 +64,7 @@ scale = Vector2( 2, 2 )
 shape = SubResource( 1 )
 
 [node name="3" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 0, 96 )
 texture = ExtResource( 1 )
 centered = false
@@ -79,6 +83,7 @@ scale = Vector2( 2, 2 )
 shape = SubResource( 1 )
 
 [node name="4" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 64, 96 )
 texture = ExtResource( 1 )
 centered = false
@@ -97,6 +102,7 @@ scale = Vector2( 2, 2 )
 shape = SubResource( 1 )
 
 [node name="5" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 128, 96 )
 texture = ExtResource( 1 )
 centered = false
@@ -115,6 +121,7 @@ scale = Vector2( 2, 2 )
 shape = SubResource( 1 )
 
 [node name="6" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 0, 160 )
 texture = ExtResource( 1 )
 centered = false
@@ -133,6 +140,7 @@ scale = Vector2( 2, 2 )
 shape = SubResource( 1 )
 
 [node name="7" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 64, 160 )
 texture = ExtResource( 1 )
 centered = false
@@ -151,6 +159,7 @@ scale = Vector2( 2, 2 )
 shape = SubResource( 1 )
 
 [node name="8" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 128, 160 )
 texture = ExtResource( 1 )
 centered = false
