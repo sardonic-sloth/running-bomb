@@ -1,24 +1,139 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Toph.tscn" type="PackedScene" id=1]
-[ext_resource path="res://grassy-knoll.tres" type="TileSet" id=2]
-[ext_resource path="res://Exit.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Audio/Music/06 - Round 2-2 - Break Silence.ogg" type="AudioStream" id=4]
+[ext_resource path="res://BackgroundRock.tres" type="TileSet" id=2]
+[ext_resource path="res://c-3_grassyRocks.png" type="Texture" id=3]
+[ext_resource path="res://JungleDirtTileSet.tres" type="TileSet" id=4]
+[ext_resource path="res://c-3_grassyRocks2.png" type="Texture" id=5]
+[ext_resource path="res://c-1-twistedBranches64px.png" type="Texture" id=6]
+[ext_resource path="res://c-1-foregroundBranch.png" type="Texture" id=7]
+[ext_resource path="res://Exit.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Audio/Music/06 - Round 2-2 - Break Silence.ogg" type="AudioStream" id=9]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 2.24319, 43.291, 258, 42, 227, 87, 35, 87 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "c-3_grassyRocks.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( -3, 9, 264, 177 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 1.25256, 43.7023, 255.239, 40.4872, 236.351, 91.9276, 22.9539, 96.3482 )
+
+[sub_resource type="TileSet" id=4]
+0/name = "c-3_grassyRocks2.png 0"
+0/texture = ExtResource( 5 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 11, 256, 174 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 1.57407, 49.1396, 255.239, 46.8891, 228.233, 92.5424, 25.2045, 95.9182 )
+
+[sub_resource type="TileSet" id=6]
+0/name = "c-3_grassyRocks2.png 0"
+0/texture = ExtResource( 5 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 5, 258, 180 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 21.311, 17.4174, 54.5864, 6.32562, 9.73688, 55.0331, 8.2901, 33.814 )
+
+[sub_resource type="TileSet" id=8]
+0/name = "c-1-twistedBranches64px.png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 1, 2, 62, 61 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=9]
+0/name = "c-1-foregroundBranch.png 0"
+0/texture = ExtResource( 7 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 13, 2, 234, 256 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
 
 [node name="World" type="Node2D"]
 position = Vector2( 1, -0.999969 )
 
 [node name="Toph" parent="." instance=ExtResource( 1 )]
 position = Vector2( 127, 289 )
+collision/safe_margin = 13.0
 
 [node name="Walls" type="Node" parent="."]
 
+[node name="Background Rock" type="TileMap" parent="Walls"]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 8, 8 )
+format = 1
+tile_data = PoolIntArray( -4325281, 0, 0, -4259815, 0, 0, -3538951, 0, 0, -3276840, 0, 0, -1376363, 0, 0, 524189, 0, 0, 1114093, 0, 0, 1048576, 0, 0 )
+
+[node name="foreground Rock2" type="TileMap" parent="Walls"]
+scale = Vector2( 1, 1 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 8, 8 )
+format = 1
+tile_data = PoolIntArray( -4325281, 0, 0, -4259815, 0, 0, -3538951, 0, 0, -3276840, 0, 0, -1376363, 0, 0, -524183, 0, 0, 524189, 0, 0, 917583, 0, 0, 1114093, 0, 0, 1048576, 0, 0 )
+
 [node name="Base" type="TileMap" parent="Walls"]
 position = Vector2( 1, 160 )
-tile_set = ExtResource( 2 )
-cell_size = Vector2( 32, 32 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 8, 8 )
 format = 1
-tile_data = PoolIntArray( 262168, 2, 0, 458745, 0, 0, 393217, 0, 0, 393218, 3, 0, 393219, 4, 0, 393220, 4, 0, 393221, 4, 0, 393222, 4, 0, 393223, 4, 0, 393225, 0, 0, 393226, 4, 0, 393227, 4, 0, 393228, 4, 0, 393229, 4, 0, 393233, 0, 0, 393237, 4, 0, 393238, 4, 0, 393239, 4, 0, 393240, 5, 0, 458754, 6, 0, 458755, 7, 0, 458756, 7, 0, 458757, 7, 0, 458758, 7, 0, 458759, 7, 0, 458760, 7, 0, 458761, 7, 0, 458762, 7, 0, 458763, 7, 0, 458764, 7, 0, 458765, 7, 0, 458766, 7, 0, 458767, 7, 0, 458768, 7, 0, 458769, 7, 0, 458770, 7, 0, 458771, 7, 0, 458773, 7, 0, 458774, 7, 0, 458775, 7, 0, 458776, 8, 0 )
+tile_data = PoolIntArray( -4259848, 0, 0, -4325350, 0, 0, -4325316, 0, 0, -4325282, 0, 0, 393295, 0, 0, 1245150, 0, 0, 1245183, 0, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -26,33 +141,47 @@ __meta__ = {
 [node name="Right Platform" type="TileMap" parent="Walls/Base"]
 position = Vector2( 0, -161 )
 z_index = -1
-tile_set = ExtResource( 2 )
+tile_set = ExtResource( 4 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 393231, 0, 0 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Left Floating Platform" type="TileMap" parent="Walls"]
 position = Vector2( 160, 160 )
 z_index = -1
-tile_set = ExtResource( 2 )
+tile_set = ExtResource( 4 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( -65544, 0, 0, 131068, 1, 0, 196604, 1, 0, 262140, 1, 0, 327676, 1, 0, 393212, 1, 0, 458748, 1, 0, 524284, 1, 0 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="Exit" parent="." instance=ExtResource( 3 )]
+[node name="Left Slant 15" type="TileMap" parent="Walls"]
+rotation = -0.261799
+tile_set = SubResource( 4 )
+format = 1
+tile_data = PoolIntArray( -327684, 0, 0, -262152, 0, 0, -196621, 0, 0, 262156, 0, 0, 262160, 0, 0 )
+
+[node name="Right Slant 15" type="TileMap" parent="Walls"]
+rotation = 0.261799
+tile_set = SubResource( 6 )
+cell_size = Vector2( 8, 8 )
+format = 1
+tile_data = PoolIntArray( -4128654, 0, 0, 2490246, 0, 0, 2817960, 0, 0, 3014603, 0, 0 )
+
+[node name="Hard Vines" type="TileMap" parent="Walls"]
+tile_set = SubResource( 8 )
+cell_size = Vector2( 8, 8 )
+format = 1
+tile_data = PoolIntArray( 786365, 0, 0, 1900612, 0, 0, 2424886, 0, 0, 2818087, 0, 0 )
+
+[node name="ForeroundVine" type="TileMap" parent="Walls"]
+z_index = 1001
+tile_set = SubResource( 9 )
+format = 1
+tile_data = PoolIntArray( 196602, 0, 0 )
+
+[node name="Exit" parent="." instance=ExtResource( 8 )]
 position = Vector2( 639, 161 )
 next_world = "res://World2.tscn"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 9 )
 volume_db = 10.0
 autoplay = true
-
-[node name="Environment" type="Node" parent="."]
-
