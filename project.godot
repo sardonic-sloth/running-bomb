@@ -19,6 +19,10 @@ config/name="Running Bomb"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Main="*res://Main.gd"
+
 [display]
 
 window/size/test_width=1280

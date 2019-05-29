@@ -1,14 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://JungleDirtTileSet.tres" type="TileSet" id=1]
-[ext_resource path="res://Toph.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Exit.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Audio/Music/World2Music.ogg" type="AudioStream" id=4]
+[ext_resource path="res://RoomArea.gd" type="Script" id=2]
 
-[node name="World 2" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 416, 448 )
 
-[node name="Walls" type="Node" parent="."]
-editor/display_folded = true
+[node name="World" type="Node2D"]
+position = Vector2( 500, 300 )
+
+[node name="Walls" type="Node2D" parent="."]
 
 [node name="Base" type="TileMap" parent="Walls"]
 tile_set = ExtResource( 1 )
@@ -19,7 +20,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Platform" type="TileMap" parent="Walls/Base"]
+[node name="Platform" type="TileMap" parent="Walls"]
 position = Vector2( 352, 160 )
 z_index = -1
 tile_set = ExtResource( 1 )
@@ -30,15 +31,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Toph" parent="." instance=ExtResource( 2 )]
-position = Vector2( 96, 288 )
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 2 )
+roomKey = "room2"
 
-[node name="Exit" parent="." instance=ExtResource( 3 )]
-position = Vector2( 736, 256 )
-next_world = "res://World.tscn"
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
-volume_db = 10.0
-autoplay = true
+[node name="RoomArea" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 460, 148 )
+shape = SubResource( 1 )
 

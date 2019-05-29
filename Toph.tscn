@@ -79,3 +79,4 @@ texture = ExtResource( 11 )
 stream = ExtResource( 12 )
 volume_db = 5.0
 pitch_scale = 5.0
+
