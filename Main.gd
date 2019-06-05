@@ -1,26 +1,11 @@
 extends Node
 
-var roomGraph = {
-	'nodes': {
-		'room1': {
-			'scene': 'res://Room1.tscn'
-		},
-		'room2': {
-			'scene': 'res://Room2.tscn'
-		},
-		'room3': {
-			'scene': 'res://Room3.tscn'
-		}
-	},
-	'edges': {
-		'room1': 'room2',
-		'room2': 'room3'
-	}
-}
-
+var roomGraph = {}
 var loadedRooms = []
 
 func _ready():
+	load_room_graph()
+
 	var roomKey = get_initial_room()
 	load_relevant_rooms(roomKey)
 
@@ -29,12 +14,25 @@ func _ready():
 	var toph = ResourceLoader.load("res://Toph.tscn").instance()
 	world.add_child(toph)
 
+func load_room_graph():
+	var file = File.new()
+	file.open('res://rooms.json', file.READ)
+	var json = JSON.parse(file.get_as_text())
+	file.close()
+
+	if json.error == OK:
+		roomGraph = json.result
+	else:
+		print("Error: ", json.error)
+		print("Error Line: ", json.error_line)
+		print("Error String: ", json.error_string)
+
 func get_initial_room():
 	return 'room1'
 
 func load_relevant_rooms(roomKey):
 	var rooms = get_neighboring_rooms(roomKey)
-	rooms.append(roomKey)
+	rooms.push_front(roomKey)
 	load_rooms(rooms)
 	unload_rooms_except(rooms)
 
