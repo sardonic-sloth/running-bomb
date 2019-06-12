@@ -1,0 +1,93 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://scripts/player/toph.gd" type="Script" id=1]
+[ext_resource path="res://images/sprites/player/walk2.png" type="Texture" id=2]
+[ext_resource path="res://images/sprites/player/idle.png" type="Texture" id=3]
+[ext_resource path="res://images/sprites/player/walk1.png" type="Texture" id=4]
+[ext_resource path="res://images/sprites/player/Run0.png" type="Texture" id=5]
+[ext_resource path="res://images/sprites/player/Run1.png" type="Texture" id=6]
+[ext_resource path="res://images/sprites/player/Run2.png" type="Texture" id=7]
+[ext_resource path="res://images/sprites/player/Run3.png" type="Texture" id=8]
+[ext_resource path="res://images/sprites/player/Run4.png" type="Texture" id=9]
+[ext_resource path="res://images/sprites/player/Run7.png" type="Texture" id=10]
+[ext_resource path="res://images/backgrounds/c-3_weirdBackground.png" type="Texture" id=11]
+[ext_resource path="res://audio/effects/boing.ogg" type="AudioStream" id=12]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.0
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": false,
+"name": "Jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "Run",
+"speed": 10.0
+} ]
+
+[sub_resource type="RayShape2D" id=3]
+
+[node name="Toph" type="RigidBody2D"]
+position = Vector2( -0.800659, 8.35917 )
+z_index = 1000
+z_as_relative = false
+collision_mask = 524289
+mode = 2
+mass = 3.0
+physics_material_override = SubResource( 1 )
+gravity_scale = 10.0
+custom_integrator = true
+contacts_reported = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 2 )
+animation = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2, -2 )
+shape = SubResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -14.8568, -17.9705, -5.07087, -22.7744, 9.519, -21.44, 18.3263, -16.3691, 21.9738, -8.62938, 21.351, 0.444809, 17.6146, 5.96049, 12.2768, 11.2093, 9.16315, 13.0775, 14.9457, 14.8568, 18.6822, 16.8139, 18.6822, 19.3939, 13.2554, 21.9738, 11.2983, 22.4186, 8.54042, 24.3758, 0.444817, 25.1764, -8.0956, 25.2654, -15.6574, 23.9309, -17.7036, 20.6393, -13.7002, 17.8815, -9.07419, 16.5471, -15.6574, 13.4334, -20.7283, 9.34107, -23.931, 1.69028, -23.931, -5.60465, -21.351, -12.0989, -16.9029, -17.0808 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.1, 0.1 )
+motion_mirroring = Vector2( 3000, 3000 )
+
+[node name="sky" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( -10, 0 )
+texture = ExtResource( 11 )
+
+[node name="Boing" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 12 )
+volume_db = 5.0
+pitch_scale = 5.0

@@ -1,0 +1,17 @@
+{
+  "nodes": {
+    "room1": {
+      "scene": "res://scenes/world/rooms/room1.tscn"
+    },
+    "room2": {
+      "scene": "res://scenes/world/rooms/room2.tscn"
+    },
+    "room3": {
+      "scene": "res://scenes/world/rooms/room3.tscn"
+    }
+  },
+  "edges": {
+    "room1": "room2",
+    "room2": "room3"
+  }
+}
