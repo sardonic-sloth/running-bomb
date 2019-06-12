@@ -16,12 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Running Bomb"
-run/main_scene="res://World.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://scenes/world/main.tscn"
+config/icon="res://images/sprites/environment/icon.png"
 
 [autoload]
 
-Main="*res://Main.gd"
+Main="*res://scripts/worlds/main.gd"
 
 [display]
 
@@ -124,4 +124,4 @@ move_right={
 [rendering]
 
 quality/2d/use_pixel_snap=true
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://tilesets/default_env.tres"

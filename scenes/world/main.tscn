@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://audio/music/break-silence.ogg" type="AudioStream" id=1]
+
+[node name="World" type="Node2D"]
+position = Vector2( 1, -0.999969 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = 10.0
+autoplay = true
