@@ -3,7 +3,7 @@ extends Node2D
 export(String, FILE, '*.png') var contents
 
 func _physics_process(delta):
-	if Input.is_action_pressed('ui_accept') and $StaticBody2D.get_overlapping_bodies():
+    if Input.is_action_pressed('ui_accept') and $Area.get_overlapping_bodies():
         open_chest()
 
 func open_chest():

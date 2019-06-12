@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Toph.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Player/walk1.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Player/walk2.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Player/idle.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Player/walk2.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Player/idle.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Player/walk1.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Player/Run0.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Player/Run1.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Player/Run2.png" type="Texture" id=7]
@@ -13,29 +13,29 @@
 [ext_resource path="res://c-3_weirdBackground.png" type="Texture" id=11]
 [ext_resource path="res://Audio/Effects/boing.ogg" type="AudioStream" id=12]
 
-[sub_resource type="PhysicsMaterial" id=2]
+[sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
-"loop": false,
-"name": "Jump",
+"loop": true,
+"name": "Fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "Walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "Fall",
+"loop": false,
+"name": "Jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
@@ -50,9 +50,10 @@ animations = [ {
 position = Vector2( -0.800659, 8.35917 )
 z_index = 1000
 z_as_relative = false
+collision_mask = 524289
 mode = 2
 mass = 3.0
-physics_material_override = SubResource( 2 )
+physics_material_override = SubResource( 1 )
 gravity_scale = 10.0
 custom_integrator = true
 contacts_reported = 3
@@ -63,7 +64,7 @@ __meta__ = {
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.3, 0.3 )
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
