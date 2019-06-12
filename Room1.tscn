@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://grassy-knoll.tres" type="TileSet" id=1]
+[ext_resource path="res://scene/environment/chest/chest.tscn" type="PackedScene" id=2]
 
 [node name="World" type="Node2D"]
 position = Vector2( 1, -0.999969 )
@@ -38,4 +39,9 @@ tile_data = PoolIntArray( 393231, 0, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Chest" parent="." instance=ExtResource( 2 )]
+position = Vector2( 415, 353 )
+z_index = 100
+contents = "res://sprite/environment/chest/scroll.png"
 
