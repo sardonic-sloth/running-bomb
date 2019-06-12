@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AutoTile256.png-52f68fc0b15b8a6f16c59b4148b89de1.stex"
+path="res://.import/grassy-ground.256.png-52f68fc0b15b8a6f16c59b4148b89de1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Tiles/AutoTile256.png"
-dest_files=[ "res://.import/AutoTile256.png-52f68fc0b15b8a6f16c59b4148b89de1.stex" ]
+source_file="res://images/sprites/tiles/auto/grassy-ground.256.png"
+dest_files=[ "res://.import/grassy-ground.256.png-52f68fc0b15b8a6f16c59b4148b89de1.stex" ]
 
 [params]
 
