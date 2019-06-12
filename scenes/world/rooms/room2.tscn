@@ -38,3 +38,4 @@ roomKey = "room2"
 [node name="RoomArea" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 460, 148 )
 shape = SubResource( 1 )
+

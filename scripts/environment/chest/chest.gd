@@ -13,4 +13,4 @@ func open_chest():
     var texture = ImageTexture.new()
     texture.load(contents)
     $Contents.texture = texture
-    $Contents.get_node('MoveUp').play('Up')
+    $Chest.play('Up')

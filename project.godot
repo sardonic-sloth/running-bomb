@@ -21,7 +21,7 @@ config/icon="res://images/sprites/environment/icon.png"
 
 [autoload]
 
-Main="*res://scripts/worlds/main.gd"
+Main="*res://scripts/world/main.gd"
 
 [display]
 
