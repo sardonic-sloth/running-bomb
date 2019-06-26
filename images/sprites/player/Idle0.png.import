@@ -2,7 +2,7 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Idle0.png-7f3430501802949ad0d6ed458caabfca.stex"
+path="res://.import/Idle0.png-0be579f1f4d1c2a3dc8d5c91cd23ea3e.stex"
 metadata={
 "vram_texture": false
 }
@@ -10,7 +10,7 @@ metadata={
 [deps]
 
 source_file="res://images/sprites/player/Idle0.png"
-dest_files=[ "res://.import/Idle0.png-7f3430501802949ad0d6ed458caabfca.stex" ]
+dest_files=[ "res://.import/Idle0.png-0be579f1f4d1c2a3dc8d5c91cd23ea3e.stex" ]
 
 [params]
 

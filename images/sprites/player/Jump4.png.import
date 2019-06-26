@@ -2,7 +2,7 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jump4.png-9c0205643a6925483ca12e3ec8970a52.stex"
+path="res://.import/Jump4.png-95be5b9544c7b875b557b41a5e88e0fc.stex"
 metadata={
 "vram_texture": false
 }
@@ -10,7 +10,7 @@ metadata={
 [deps]
 
 source_file="res://images/sprites/player/Jump4.png"
-dest_files=[ "res://.import/Jump4.png-9c0205643a6925483ca12e3ec8970a52.stex" ]
+dest_files=[ "res://.import/Jump4.png-95be5b9544c7b875b557b41a5e88e0fc.stex" ]
 
 [params]
 

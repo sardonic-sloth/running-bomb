@@ -2,7 +2,7 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Run7.png-ca6901f3ab8f30777d96e71941388fc3.stex"
+path="res://.import/Run7.png-63b959452f4414ee4170fced81d97af0.stex"
 metadata={
 "vram_texture": false
 }
@@ -10,7 +10,7 @@ metadata={
 [deps]
 
 source_file="res://images/sprites/player/Run7.png"
-dest_files=[ "res://.import/Run7.png-ca6901f3ab8f30777d96e71941388fc3.stex" ]
+dest_files=[ "res://.import/Run7.png-63b959452f4414ee4170fced81d97af0.stex" ]
 
 [params]
 

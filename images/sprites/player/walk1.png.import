@@ -2,7 +2,7 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/walk1.png-17e476ed386a9ae6c85497b7941fc925.stex"
+path="res://.import/walk1.png-0d62b5c129e217a28c4b99bbf8701d45.stex"
 metadata={
 "vram_texture": false
 }
@@ -10,7 +10,7 @@ metadata={
 [deps]
 
 source_file="res://images/sprites/player/walk1.png"
-dest_files=[ "res://.import/walk1.png-17e476ed386a9ae6c85497b7941fc925.stex" ]
+dest_files=[ "res://.import/walk1.png-0d62b5c129e217a28c4b99bbf8701d45.stex" ]
 
 [params]
 

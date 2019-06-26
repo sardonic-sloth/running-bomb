@@ -16,4 +16,3 @@ tile_data = PoolIntArray( -458768, 0, 0, -458766, 0, 196609, -458765, 0, 0, -393
 [node name="Node2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( -158.845, 116.458 )
 contents = "res://images/sprites/environment/chest/scroll.png"
-
