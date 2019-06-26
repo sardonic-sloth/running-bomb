@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/RonaldWorld1music.ogg-8d84e83ce2042c9dd0d1e3af5deb9992.oggstr"
+
+[deps]
+
+source_file="res://audio/music/RonaldWorld1music.ogg"
+dest_files=[ "res://.import/RonaldWorld1music.ogg-8d84e83ce2042c9dd0d1e3af5deb9992.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

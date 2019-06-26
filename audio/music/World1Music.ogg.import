@@ -2,12 +2,12 @@
 
 importer="ogg_vorbis"
 type="AudioStreamOGGVorbis"
-path="res://.import/World1Music.ogg-cd705beb7c5f83a7ff48c833d182ca30.oggstr"
+path="res://.import/World1Music.ogg-7c01cb1a745eec154b1c9df117a62f84.oggstr"
 
 [deps]
 
 source_file="res://audio/music/World1Music.ogg"
-dest_files=[ "res://.import/World1Music.ogg-cd705beb7c5f83a7ff48c833d182ca30.oggstr" ]
+dest_files=[ "res://.import/World1Music.ogg-7c01cb1a745eec154b1c9df117a62f84.oggstr" ]
 
 [params]
 
