@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chest2.png-8dc12057417adc75bed8db024304ed60.stex"
+path="res://.import/smalldoor.png-3df974bcbdc4759c6b995eb6444b750d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/sprites/environment/chest/chest2.png"
-dest_files=[ "res://.import/chest2.png-8dc12057417adc75bed8db024304ed60.stex" ]
+source_file="res://images/sprites/environment/smalldoor.png"
+dest_files=[ "res://.import/smalldoor.png-3df974bcbdc4759c6b995eb6444b750d.stex" ]
 
 [params]
 

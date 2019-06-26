@@ -30,3 +30,4 @@ tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 393231, 0, 0 )
+
