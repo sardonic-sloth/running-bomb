@@ -2,7 +2,7 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jump1.png-9749e5d58f27aeec18bdc0b4f8be9025.stex"
+path="res://.import/Jump1.png-6c8606d652df8f7da10928092e5c9420.stex"
 metadata={
 "vram_texture": false
 }
@@ -10,7 +10,7 @@ metadata={
 [deps]
 
 source_file="res://images/sprites/player/Jump1.png"
-dest_files=[ "res://.import/Jump1.png-9749e5d58f27aeec18bdc0b4f8be9025.stex" ]
+dest_files=[ "res://.import/Jump1.png-6c8606d652df8f7da10928092e5c9420.stex" ]
 
 [params]
 

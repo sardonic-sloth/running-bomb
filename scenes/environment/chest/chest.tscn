@@ -108,6 +108,7 @@ animation = "open"
 
 [node name="OpenSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 8 )
+volume_db = 24.0
 
 [node name="Contents" type="Sprite" parent="."]
 visible = false
@@ -126,4 +127,3 @@ process_material = SubResource( 7 )
 
 [node name="Chest" type="AnimationPlayer" parent="."]
 anims/Up = SubResource( 8 )
-

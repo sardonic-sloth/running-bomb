@@ -2,12 +2,12 @@
 
 importer="ogg_vorbis"
 type="AudioStreamOGGVorbis"
-path="res://.import/boing.ogg-9de9eb4f4d13bb5e72feec14cf7fdbb7.oggstr"
+path="res://.import/boing.ogg-b21e4cb8b78588dee44fd57cf5d9e300.oggstr"
 
 [deps]
 
 source_file="res://audio/effects/boing.ogg"
-dest_files=[ "res://.import/boing.ogg-9de9eb4f4d13bb5e72feec14cf7fdbb7.oggstr" ]
+dest_files=[ "res://.import/boing.ogg-b21e4cb8b78588dee44fd57cf5d9e300.oggstr" ]
 
 [params]
 

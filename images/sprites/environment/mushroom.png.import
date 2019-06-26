@@ -2,7 +2,7 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mushroom.png-5abc3c1d886cc32ba7d31702df22c776.stex"
+path="res://.import/mushroom.png-82dee090ec98990d494a95ed1de8d44d.stex"
 metadata={
 "vram_texture": false
 }
@@ -10,7 +10,7 @@ metadata={
 [deps]
 
 source_file="res://images/sprites/environment/mushroom.png"
-dest_files=[ "res://.import/mushroom.png-5abc3c1d886cc32ba7d31702df22c776.stex" ]
+dest_files=[ "res://.import/mushroom.png-82dee090ec98990d494a95ed1de8d44d.stex" ]
 
 [params]
 

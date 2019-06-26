@@ -1,8 +1,8 @@
-images/[remap]
+[remap]
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/JungleDirtTileSet.png-8de719a6cd5d0d1cc3206639bc4da3df.stex"
+path="res://.import/JungleDirtTileSet.png-335e0259b51294f539e4de5ee2d6509e.stex"
 metadata={
 "vram_texture": false
 }
@@ -10,7 +10,7 @@ metadata={
 [deps]
 
 source_file="res://images/sprites/tiles/JungleDirtTileSet.png"
-dest_files=[ "res://.import/JungleDirtTileSet.png-8de719a6cd5d0d1cc3206639bc4da3df.stex" ]
+dest_files=[ "res://.import/JungleDirtTileSet.png-335e0259b51294f539e4de5ee2d6509e.stex" ]
 
 [params]
 
