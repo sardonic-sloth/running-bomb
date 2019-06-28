@@ -1,30 +1,25 @@
 extends RigidBody2D
 
-var anim = ""
-var facing_left = false
-var jumping = false
-var stopping_jump = false
+var WALK_ACCEL = 1200.0  # bigger value = faster horizontal acceleration while on the ground
+var WALK_DEACCEL = 100.0  # bigger value = faster horizontal deceleration after releasing direction
+var WALK_MAX_VELOCITY = 400.0  # bigger value = faster top horizontal speed
+var AIR_ACCEL = 1200.0  # bigger value = faster horizontal acceleration when in the air
+var AIR_DEACCEL = 400.0  # bigger value = horizontal momentum stops faster when you release direction while in the air
+var JUMP_VELOCITY = 600  # bigger value = higher jumps
+var STOP_JUMP_FORCE = 2000.0  # bigger value = smaller min jump height
+var MAX_FLOOR_AIRBORNE_TIME = 0.01  # You can be off the floor for this long and still be considered 'on the floor'
 
-var WALK_ACCEL = 800.0
-var WALK_DEACCEL = 800.0
-var WALK_MAX_VELOCITY = 200.0
-var AIR_ACCEL = 300.0
-var AIR_DEACCEL = 800.0
-var JUMP_VELOCITY = 600
-var STOP_JUMP_FORCE = 900.0
-
-var MAX_FLOOR_AIRBORNE_TIME = 0.15
-
-var airborne_time = 1e20
-
-var floor_h_velocity = 0.0
+var anim = ""  # Which animation is currently playing?
+var jumping = false  # Is the character currently jumping (on the way up)?
+var stopping_jump = false  # Did the player release jump on the way up?
+var airborne_time = 0  # How long has the character been in the air?
+var floor_h_velocity = 0.0  # ??? I think this is to handle moving platforms?
 
 func _integrate_forces(state):
     var lv = state.get_linear_velocity()
     var step = state.get_step()
 
     var new_anim = anim
-    var new_facing_left = facing_left
 
     # Get the controls
     var move_left = Input.is_action_pressed("move_left")
@@ -91,11 +86,6 @@ func _integrate_forces(state):
             stopping_jump = false
             $Boing.play()
 
-        # Check facing
-        if lv.x < 0 and move_left:
-            new_facing_left = true
-        elif lv.x > 0 and move_right:
-            new_facing_left = false
         if jumping:
             new_anim = "Jump"
         elif abs(lv.x) < 0.1:
@@ -122,14 +112,11 @@ func _integrate_forces(state):
         else:
             new_anim = "Fall"
 
-    # Update facing
-    if new_facing_left != facing_left:
-        if new_facing_left:
-            $Sprite.flip_h = true
-        else:
-            $Sprite.flip_h = false
-
-        facing_left = new_facing_left
+    # Check facing
+    if move_left:
+        $Sprite.flip_h = true
+    elif move_right:
+        $Sprite.flip_h = false
 
     # Change animation
     if new_anim != anim:
